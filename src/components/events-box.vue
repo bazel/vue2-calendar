@@ -2,7 +2,7 @@
   <div class="events">
     <div
       :key="index"
-      class="event bg-primary-1"
+      class="event" 
       :class="event.classes"
       @click.stop="eventClicked(event)"
       v-for="(event, index) in eventList"
