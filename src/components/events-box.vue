@@ -7,7 +7,7 @@
       @click.stop="eventClicked(event)"
       v-for="(event, index) in eventList"
     >
-      <div class="event-title">
+      <div class="event-title bg-primary-1">
         {{ event.icon}} {{ event.title }}
       </div>
     </div>
