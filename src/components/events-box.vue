@@ -2,13 +2,14 @@
   <div class="events">
     <div
       :key="index"
-      class="event"
+      class="event bg-primary-1"
       :class="event.classes"
       @click.stop="eventClicked(event)"
       v-for="(event, index) in eventList"
     >
-      <div class="event-title bg-primary-1">
-        <i class="fal " :class="event.icon" v-if="event.icon"></i> {{ event.title }}
+      <span v-if="event.icon"> <i class="fal" :class="event.icon"></i> </span>
+      <div class="event-title">
+       {{ event.title }}
       </div>
     </div>
     <span v-if="more" class="more-link" @click.stop="showAll()">
