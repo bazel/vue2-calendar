@@ -3,12 +3,12 @@
     <div
       :key="index"
       class="event" 
-      :class="event.classes +' '+event.icon"
+      :class="event.classes +' '+event.base"
       @click.stop="eventClicked(event)"
       v-for="(event, index) in eventList"
     >
       <div class="event-title">
-       <i class="event-icon mr-1 far" :class="event.icon"></i> {{ event.title }}
+       <i class="event-icon mr-1 fas" :class="event.icon"></i> {{ event.title }}
       </div>
     </div>
     <span v-if="more" class="more-link" @click.stop="showAll()">
