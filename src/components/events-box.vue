@@ -8,7 +8,7 @@
       v-for="(event, index) in eventList"
     >
       <div class="event-title bg-primary-1">
-        {{ event.icon}} {{ event.title }}
+        <i class="fal " :class="event.icon" v-if="event.icon"></i> {{ event.title }}
       </div>
     </div>
     <span v-if="more" class="more-link" @click.stop="showAll()">
