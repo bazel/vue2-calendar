@@ -7,10 +7,9 @@
       @click.stop="eventClicked(event)"
       v-for="(event, index) in eventList"
     >
-      <span v-if="event.icon"> <i class="fal" :class="event.icon"></i> </span>
-      <span class="event-title">
-       {{ event.title }}
-      </span>
+      <div class="event-title">
+       <i class="event-icon fal" :class="event.icon"></i> {{ event.title }}
+      </div>
     </div>
     <span v-if="more" class="more-link" @click.stop="showAll()">
       <template v-if="displayShowMoreCount">{{ showMoreCount }}</template>
