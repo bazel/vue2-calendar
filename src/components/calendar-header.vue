@@ -2,6 +2,7 @@
   <div class="calendar-header">
     <div class="header-left">
       <slot name="header-left">
+          <button class="btn btn-outline-primary btn-sm" @click.stop="goToday"><i class="fal fa-calendar-star"></i> </button>
       </slot>
     </div>
     <div class="header-center">
@@ -79,6 +80,9 @@
       goToDate(date) {
         this.monthStart = calendarJs.firstDateOfMonth(date);
       },
+      goToday(){
+        this.monthStart = getMonth() + 1
+      }
     },
     watch: {
       monthStart(monthStart) {
