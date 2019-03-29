@@ -81,8 +81,9 @@
         this.monthStart = calendarJs.firstDateOfMonth(date);
       },
       goToday(){
-        var TodayDate = new Date();
-        this.monthStart = TodayDate.getMonth() + 1
+        var date = new Date();
+        var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+        this.monthStart = firstDay
       }
     },
     watch: {
