@@ -5,14 +5,16 @@
       </slot>
     </div>
     <div class="header-center">
-      <span v-if="!isPrevMonthDisabled" class="prev-month" @click.stop="goPrev"> &lt; </span>
 
       <span class="title"> {{ month }} {{ year }} </span>
 
-      <span v-if="!isNextMonthDisabled" class="next-month" @click.stop="goNext"> &gt; </span>
     </div>
     <div class="header-right">
       <slot name="header-right">
+
+          <button class="btn btn-outline-primary btn-sm" v-if="!isPrevMonthDisabled" class="prev-month" @click.stop="goPrev"><i class="fal fa-chevron-left"></i></button>
+          <button class="btn btn-outline-primary btn-sm" v-if="!isNextMonthDisabled" class="next-month" @click.stop="goNext"><i class="fal fa-chevron-right"></i></button>
+
       </slot>
     </div>
   </div>
