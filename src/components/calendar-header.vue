@@ -13,8 +13,8 @@
     <div class="header-right">
       <slot name="header-right">
 
-          <button class="btn btn-outline-primary btn-sm prev-month" v-if="!isPrevMonthDisabled" @click.stop="goPrev"><i class="fal fa-chevron-left"></i></button>
-          <button class="btn btn-outline-primary btn-sm next-month" v-if="!isNextMonthDisabled" c @click.stop="goNext"><i class="fal fa-chevron-right"></i></button>
+          <button class="btn btn-outline-primary btn-sm bg-blue-200 prev-month" v-if="!isPrevMonthDisabled" @click.stop="goPrev"><i class="fal fa-chevron-left"></i></button>
+          <button class="btn btn-outline-primary btn-sm bg-blue-200 next-month" v-if="!isNextMonthDisabled" c @click.stop="goNext"><i class="fal fa-chevron-right"></i></button>
 
       </slot>
     </div>
